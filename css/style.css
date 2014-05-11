@@ -1,9 +1,18 @@
 @charset "utf-8";
 .ListDisplay{
 	border-style:inset;
+	min-height:80px;
 }
 
 .Hint{
 	font-style:italic;
 	color:#B8B8B8;
+}
+
+h1{
+	text-align:center;
+}
+
+.ControlPanel>button{
+	width:80px;
 }

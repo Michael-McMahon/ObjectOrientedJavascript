@@ -2,19 +2,24 @@
 <html>
 <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/SortableList.js"></script>
+    <script src="js/MergeSort.js"></script>
+    <script src="js/SortableList3.js"></script>
+    <script src="js/SortableList2.js"></script>
     <script src="js/UIactions.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <div>
-	<h1>Merge Sort</h1>
-	<h2>Values to Sort:</h2>
-	<div id="MS_List" class="ListDisplay">
-    	<p class="Hint">Click the "Add to List" button to add values.</p>
+	<h1 id="sortTitle">Sort</h1>
+	<div>Values to Sort:</div>
+	<div class="ListDisplay">
+    	<p id="listContent"></p>
 	</div>
-	<input type="number" id="MS_ValueAdd">
-	<button id="MSaddButton">Add to List</button>
-    <br>
-    <button id="sortButton">Sort List</button>
+    <div class="ControlPanel">
+        <button id="sortButton">Sort List</button>
+       	<input id="listRadio1" type="radio" name="listRadio" value="List 1">List 1
+       	<input id="listRadio2" type="radio" name="listRadio" value="List 2">List 2<br>
+        <button id="MSaddButton">Add to List</button>
+		<input type="number" id="MS_ValueAdd">
+    </div>
 </div>

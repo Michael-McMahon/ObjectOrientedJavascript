@@ -1,5 +1,6 @@
 var SortableList = (function(){
 	var list = [];
+	var listType = "Sortable List";
 	
 	function mergeSort(list, helper, low, high)
 	{
@@ -61,6 +62,10 @@ var SortableList = (function(){
 		
 		getList : function(){
 			return list;
+		},
+		
+		getListType : function(){
+			return listType;
 		}
 	};
 })();
