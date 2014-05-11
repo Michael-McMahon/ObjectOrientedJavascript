@@ -1,5 +1,9 @@
 @charset "utf-8";
-p.ListDisplay{
+.ListDisplay{
 	border-style:inset;
 }
 
+.Hint{
+	font-style:italic;
+	color:#B8B8B8;
+}

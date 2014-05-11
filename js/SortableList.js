@@ -5,7 +5,8 @@ var SortableList = (function(){
 	{
 		if(low < high)
 		{
-			var mid = (low + high) / 2;
+			//Floor mid to a whole number, because Javascript will cast mid as a float.
+			var mid = Math.floor((low + high) / 2);
 			mergeSort(list, helper, low, mid);
 			mergeSort(list, helper, mid + 1, high);
 			merge(list, helper, low, mid, high);
@@ -16,6 +17,7 @@ var SortableList = (function(){
 	{
 		var i;
 		
+		//Helper holds a copy of the unsorted list
 		for(i = low; i <= high; i++)
 		{
 			helper[i] = list[i];
