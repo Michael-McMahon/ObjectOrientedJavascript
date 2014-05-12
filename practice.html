@@ -4,7 +4,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/MergeSort.js"></script>
     <script src="js/SortableList3.js"></script>
-    <script src="js/SortableList2.js"></script>
+    <script src="js/SummableList.js"></script>
     <script src="js/UIactions.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -17,9 +17,11 @@
 	</div>
     <div class="ControlPanel">
         <button id="sortButton">Sort List</button>
-       	<input id="listRadio1" type="radio" name="listRadio" value="List 1">List 1
-       	<input id="listRadio2" type="radio" name="listRadio" value="List 2">List 2<br>
-        <button id="MSaddButton">Add to List</button>
+       	<input id="listRadio1" type="radio" name="listRadio">List 1
+       	<input id="listRadio2" type="radio" name="listRadio">List 2
+        <input id="listRadio3" type="radio" name="listRadio">List 3
+        <br><button id="MSaddButton">Add to List</button>
 		<input type="number" id="MS_ValueAdd">
+        <br>Sum is:<p id="sumDisplay"></p>
     </div>
 </div>

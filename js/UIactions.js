@@ -6,13 +6,13 @@ $(document).ready(function(){
 	//Create instances of the list object
 	sortLists.push(new SortableList);
 	sortLists.push(new SortableList);
-	currList = sortLists[0];
+	sortLists.push(new SummableList);
 	
 	//Setup the UI
+	setListSelectListener();
 	setTitle();
 	setAddListener();
 	setSortButtonListener();
-	setListSelectListener();
 });
 
 //Set title to sorting algoritm used
@@ -32,10 +32,11 @@ function setSortButtonListener(){
 function setAddListener(){
 	$("#MSaddButton").click(function(){
 		//Add value to list
-		var newVal = $("#MS_ValueAdd").val();
+		var newVal = parseInt($("#MS_ValueAdd").val());
 		currList.add(newVal);
 		//Update UI
 		updateListText();
+		updateSumDisplay();
 	});
 }
 
@@ -69,12 +70,28 @@ function updateListText(){
 
 function setListSelectListener()
 {
-	$("#listRadio1").click(function(){changeList(0)});
-	$("#listRadio2").click(function(){changeList(1)});
+	var list1 = $("#listRadio1");
+	
+	list1.click(function(){changeList(0);});
+	$("#listRadio2").click(function(){changeList(1);});	
+	$("#listRadio3").click(function(){changeList(2);});
+	
+	//Set first list as selected
+	list1.click();
 }
 
 function changeList(listNum)
 {
 	currList = sortLists[listNum];
 	updateListText();
+	updateSumDisplay();
+}
+
+function updateSumDisplay(){
+	if(currList instanceof SummableList){
+		$("#sumDisplay").text(currList.getSum());
+	}
+	else{
+		$("#sumDisplay").text("Not an instance of SummableList");
+	}
 }

@@ -3,6 +3,10 @@ function SortableList(){
 	this.listType = "Sortable List";
 }
 
+SortableList.prototype.list = [];
+
+SortableList.prototype.listType = "";
+
 SortableList.prototype.add = 
 function(v){
 	this.list.push(v);
